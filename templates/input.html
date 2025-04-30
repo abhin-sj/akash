@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Details - Insurance Prediction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff; /* Pure white container */
+            max-width: 900px; /* Slightly wider container */
+            width: 100%;
+            padding: 40px; /* Increased padding */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); /* Soft shadow */
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e88e5; /* Dark blue for headings */
+            margin-bottom: 30px;
+            font-size: 2.5em; /* Larger heading */
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: #424242; /* Darker gray for labels */
+            margin-bottom: 8px;
+            font-size: 1.1em; /* Slightly larger labels */
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px; /* Larger input padding */
+            border: 2px solid #b0bec5; /* Light blue-gray border */
+            border-radius: 6px; /* Rounded corners for inputs */
+            font-size: 1em; /* Larger input text */
+            transition: border-color 0.3s; /* Smooth border transition */
+        }
+
+        input:focus, select:focus {
+            border-color: #1e88e5; /* Dark blue on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        button {
+            background-color: #2e7d32; /* Deeper green for button */
+            color: white;
+            padding: 15px 30px; /* Larger button padding */
+            border: none;
+            border-radius: 6px; /* Rounded button */
+            cursor: pointer;
+            font-size: 18px; /* Larger button text */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: #1b5e20; /* Darker green on hover */
+            transform: scale(1.05); /* Slight scale up on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Information</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="number" step="0.1" id="bmi" name="bmi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="children">Number of Children:</label>
+                <input type="number" id="children" name="children" required>
+            </div>
+
+            <div class="form-group">
+                <label for="smoker">Smoker:</label>
+                <select id="smoker" name="smoker" required>
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="region">Region:</label>
+                <select id="region" name="region" required>
+                    <option value="0">Southeast</option>
+                    <option value="1">Southwest</option>
+                    <option value="2">Northeast</option>
+                    <option value="3">Northwest</option>
+                </select>
+            </div>
+
+            <button type="submit">Predict Insurance Cost</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result - Insurance Prediction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff; /* Pure white container */
+            max-width: 900px; /* Slightly wider container */
+            width: 100%;
+            padding: 40px; /* Increased padding */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.15); /* Soft shadow */
+            text-align: center;
+        }
+
+        h1 {
+            color: #1e88e5; /* Dark blue for headings */
+            margin-bottom: 30px;
+            font-size: 2.5em; /* Larger heading */
+            font-weight: bold;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 25px;
+            border: 2px solid #b0bec5; /* Light blue-gray border */
+            border-radius: 10px; /* Rounded corners for result box */
+            background-color: #f5f5f5; /* Light gray background for contrast */
+            display: inline-block;
+            width: 80%;
+            max-width: 600px;
+            margin-bottom: 40px; /* Added space below the result */
+        }
+
+        .result h2 {
+            color: #424242; /* Darker gray for subheadings */
+            margin-bottom: 15px;
+            font-size: 1.5em; /* Larger subheading */
+        }
+
+        .result p {
+            color: #333; /* Darker text for prediction value */
+            font-size: 1.3em; /* Larger prediction text */
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #2e7d32; /* Deeper green for button */
+            color: white;
+            padding: 15px 30px; /* Larger button padding */
+            border: none;
+            border-radius: 6px; /* Rounded button */
+            cursor: pointer;
+            font-size: 18px; /* Larger button text */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #1b5e20; /* Darker green on hover */
+            transform: scale(1.05); /* Slight scale up on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result">
+            <h2>Estimated Insurance Cost:</h2>
+            <p>${{ prediction|round(2) }}</p>
+        </div>
+        <a href="/" style="display: block; margin-top: 20px;"><button class="button">Back to Home</button></a>
+    </div>
+</body>
+</html>
